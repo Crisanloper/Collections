@@ -21,35 +21,36 @@ public class CourseService
         courses.put( "art_01", new Course( "Arts 1", "art_01", 8 ) );
         courses.put( "chem_01", new Course( "Chemistry 1", "chem_01", 8 ) );
         courses.put( "sport_01", new Course( "Sports 1", "sport_01", 8 ) );
-    }
+    }//CourseService
 
     public void enrollStudent(String studentId, String courseId){
         //TODO implement so it adds the given course form the student
     	courses.get(courseId);
     	students.get(studentId);
-    	
-    }
+//courses.foreach((courseId,studentId)->students);
+    	//System.out.println(courses.computeIfPresent(courseId, studentId));
+    }//enronllStudent
 
     public void unEnrollStudent(String studentId, String courseId){
         //TODO implement so it removes the given course form the student
     	courses.get(courseId);
     	students.get(studentId);
     	
-    }
+    }//unEnrollStudent
 
     public void displayCourseInformation(String courseId){
         //TODO implement so it shows the course name, id and credits
     	//System.out.println(courses.get(courseId));
     	courses.get(courseId);
         System.out.println(courses.toString());
-    }
+    }//displayCourseInformation
 
     public void displayStudentInformation(String studentId){
         //TODO implement so it shows the student name, id and list of enrolled courses
     	//System.out.println(students.get(studentId));//
     	students.get(studentId);
     	System.out.println(students.toString());
-    }
+    }//displayStudentInformation
 
 
 }
